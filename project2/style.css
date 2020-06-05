@@ -1,0 +1,419 @@
+/* background of site */
+html {
+    background-color: #2B2B2B;
+    height: 1000px;;
+}
+
+/* body background */
+body {
+    background-color: #F6F6F6;
+    width: 80%;
+    margin: auto;
+    margin-top: 0.5%;
+    margin-bottom: 4%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+P {
+    padding: 12%;
+}
+
+/*organize position of title and game */
+#title{
+    font-size: 100px;
+    margin: auto;
+    text-align: center;
+    background-color: #558C89;
+    border-bottom: 3px solid #DE1B1B;
+    font-family: 'Anton', sans-serif;
+    color: #F6F6F6;
+}
+
+#game {
+    background-color: #2B2B2B;
+    width: 46%;
+    height: 78%;
+    margin: 2%;
+    float: left;
+    box-shadow: 0 15px 15px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*All the info to tell the player what is going on*/
+#gameInfo {
+    background-color: #2B2B2B;
+    float: right;
+    width: 46%;
+    height: 78%;
+    margin: 2%;
+    box-shadow: 0 15px 15px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#messenger {
+    background-color: #F6F6F6;
+    width: 84%;
+    margin: auto;
+    margin-top: 5%;
+    height: 35%;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+#redWinCount {
+    background-color: #F6F6F6;
+    width: 36%;
+    height: 44%;
+    margin-top: 8%;
+    margin-left: 8%;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 40px;
+    float: left;
+}
+
+#blueWinCount {
+    background-color: #F6F6F6;
+    width: 36%;
+    height: 44%;
+    margin-top: 8%;
+    margin-right: 8%;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 40px;
+    float: right;
+}
+
+#redWinCount div {
+    background-color: #558C89;
+    color: #ff2f2f;
+    font-size: 120px;
+    border-radius: 10px;
+    height: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#blueWinCount div {
+    background-color: #558C89;
+    color: #3232ea;
+    font-size: 120px;
+    border-radius: 10px;
+    height: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* arrows and game grid */
+.arrow{
+    width: 11%;
+	margin:1%;
+    display: inline-block;
+}
+
+.arrow i:hover{
+    border: solid #00FA9A;
+    border-width: 0 3px 3px 0;
+    background-color: #558C89;
+    cursor: pointer;
+}
+
+.arrow i {
+    background-color: #00FA9A;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border: solid #558C89;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 40%;
+    border-radius: 20px 15px 5px 15px;
+    transition:0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#arrowContainer{
+    width: 80%;
+	display:block;
+	position:relative;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    border-radius:5px;
+    background-color: #E9E581;
+}
+
+#gridContainer{
+    width: 80%;
+	display:block;
+	position:relative;
+    text-align: center;
+    height: 75%;
+    margin: auto;
+    margin-top: 2%;
+    border-radius:5px;
+    background-color: #E9E581;
+}
+
+#gameContainer {
+    background-color: #558C89;
+    width: 85%;
+    height: 70%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    clear:both;
+    overflow: hidden;
+    padding-bottom: 2%;
+}
+
+/* reset button */
+#reset {
+    font-size: 70px;
+    text-align: center;
+    background-color:  #00FA9A;
+    height: 12%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 5px solid #00FA9A;
+    transition: 0.5s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Monofett', cursive;
+    color: #F6F6F6;
+}
+
+br {
+    clear: both;
+}
+
+#reset:hover{
+    background-color:#F6F6F6;
+    border: 5px solid #00FA9A;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color:#00FA9A;
+    cursor: pointer;
+}
+
+/* Regular Cells */
+.cell{
+    margin: 1%;
+	height:12.67%;
+	width: 10.5%;
+	border:1px solid #558C89; 
+	background-color: #cbe7db;
+    border-radius: 50px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+/* Filled cells */
+.cellFilledRed {
+    margin: 1%;
+	height:12.67%;
+	width: 10.5%;
+	border:1px solid #558C89; 
+	background-color: #ff2f2f;
+    border-radius: 50px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.cellFilledBlue {
+    margin: 1%;
+	height:12.67%;
+	width: 10.5%;
+	border:1px solid #558C89; 
+	background-color: #3232ea;
+    border-radius: 50px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+/* footer */
+footer {
+    font-size: 20px;
+    margin: auto;
+    width: 100%;
+    height: 10%;
+    background-color: #558C89;
+    border-top: 3px solid #DE1B1B;
+    bottom: 0;
+    width: 100%;
+}
+
+#documentation {
+    float: right;
+    display: inline-block;
+    padding: 1%;
+    margin: 1%;
+    color: #F6F6F6;
+    background-color: #00FA9A;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 1s;
+    border: 3px solid #00FA9A;
+    font-family: 'Anton', sans-serif;
+}
+
+#documentation:hover {
+    color: #00FA9A;
+    background-color: #F6F6F6;
+}
+
+#copyright {
+    display: inline-block;
+    margin: auto;
+    padding: 1%;
+    margin: 1%;
+}
+
+/* link stuff */
+a {
+    color: #F6F6F6;
+    background-color: #00FA9A;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 1s;
+    border: 3px solid #00FA9A;
+}
+
+a:hover {
+    color: #00FA9A;
+    background-color: #F6F6F6;
+}
+
+a:active {
+    color: #F6F6F6;
+}
+
+a:visited {
+    color: #2B2B2B;
+}
+
+/* Documentation Style specific stuff */
+.contentContainer {
+    margin: 4%;
+    padding: 2%;
+    background-color: #2B2B2B;
+}
+.content {
+    margin: 1.5%;
+    padding: 1%;
+    background-color:  #F6F6F6;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+/* Responsive design stuff.... kind of */
+@media screen and (max-width: 1080px) {
+    html {
+        background-color: #2B2B2B;
+        height: 600px;;
+    }
+
+    /* Regular Cells */
+    .cell{
+        margin: 0.3%;
+    }
+    
+    /* Filled cells */
+    .cellFilledRed {
+        margin: 0.3%;
+    }
+
+    .cellFilledBlue {
+        margin: 0.3%;
+    }
+    
+    /* body background */
+    body {
+        width: 90%;
+        margin-top: 0.5%;
+        margin-bottom: 4%;
+    }
+    
+    P {
+        padding: 6%;
+    }
+    
+    /*organize position of title and game */
+    #title{
+        font-size: 24px;
+        margin: auto;
+    }
+    
+    /* footer */
+    footer {
+        font-size: 14px;
+        height: 18%;
+    }
+    
+    /* reset button */
+    #reset {
+        font-size: 30px;
+    }
+    
+    /* Documentation Style specific stuff */
+    .contentContainer {
+        margin: 1%;
+        padding: 1%;
+        background-color: #2B2B2B;
+    }
+    .content {
+        margin: 1%;
+        padding: 1%;
+        font-size: 12px;
+    }
+    
+    #messenger {
+        margin: auto;
+        margin-top: 5%; 
+        font-size: 14px;
+    }
+    
+    #redWinCount {
+        width: 36%;
+        font-size: 16px;
+    }   
+
+    #blueWinCount {
+        width: 36%;
+        font-size: 16px;
+    }
+    
+    #redWinCount div {
+        font-size: 40px;
+        height: 70%;
+    }
+    
+    #blueWinCount div {
+        font-size: 40px;
+        height: 70%;
+    }
+    
+    #game {
+        width: 46%;
+        height: 78%;
+        margin: 2%;
+    }
+    
+    /*All the info to tell the player what is going on*/
+    #gameInfo {
+        width: 46%;
+        height: 78%;
+        margin: 2%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    html {
+        background-color: #2B2B2B;
+        height: 400px;;
+    }
+    
+    #messenger {
+        margin: auto;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Documentation</title>
+	<meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div id="title">Connect Four Documentation</div>
+    </header>
+    
+    <div id="gameContainer">
+        <div class="contentContainer">
+            <p class="content">Day 1: Figured out button interactivity for Connect Four board. Checks if next cell in column is filled already, if not, keeps going.</p>
+            <p class="content">Day 2: Coded a function to check for a player win. Horizontal and vertical checks were simple. Diagonal checks were more complex. Figured out a nice algorithm that steps through
+			array diagonally after looking at similar problems that people had on StackOverflow.com. Uses a nested for loop and (should) dynamically adapt to a change in the number of rows or columns.</p>
+            <p class="content">Day 3: Started building presentation of the site. Laid out game info, game itself, and footer. Game info changes based on whose turn it is and who won. Score is just how many games each player won.
+			Programmed reset button so players could start over in the event of a tie, or when one person has won. Found CSS code that could add shadows to elements on W3Schools, used it for my buttons.</p>
+            <p class="content">Day 4: Added behavioral elements to site. (transitions to buttons, cells on the board fade in when they are filled, mouse pointer is changed to a hand when hovering over
+            buttons, etc.)</p>
+            <p class="content">Day 5: Added sound that I got from a Freesound.org. Original Source: https://freesound.org/people/lebcraftlp/sounds/192278/   Also put JavaScript in separate file just to see if I could.</p>
+			<p class="content">Above and Beyond: The code I used to check for diagonal wins took me a little while to come up with, there is also sound, the site is semi-responsive(As in the game works on mobile,
+			but doesn't necessarily look pretty), etc.</p>
+		</div>
+    </div>
+
+	<footer><div id="copyright">&copy; Sean Arnold 2017</div><a href="index.html" id="documentation">Back To Game</a></footer>
+
+</body>
+</html>

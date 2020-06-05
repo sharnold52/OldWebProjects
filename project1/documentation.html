@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Sean Arnold Project 1: Documentation</title>
+    <link href="style/mainStyle.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar-->
+    <header>
+        <ul id="navlist">
+            <li><a href ="https://people.rit.edu/swa4861/230/project1/">Home</a></li>
+            <li><a href= "https://people.rit.edu/swa4861/230/project1/proposal">Proposal</a></li>
+            <li class="active"><a href="https://people.rit.edu/swa4861/230/project1/documentation">Documentation</a></li>
+            <li id="project"><a href="https://people.rit.edu/swa4861/230/project1/project">Project</a></li>
+        </ul>
+    </header>
+
+    <!-- Title of Page -->
+    <div id="title">Project One: Documentation</div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="articleTitle">Tutorials</div>
+            <div class="contentLower">
+                <ul>
+                    <li><a href="https://www.w3schools.com/css/css_navbar.asp">W3schools Tutorial</a>   -- Used to help me make the navigation bar.</li>
+                </ul>
+            </div>
+        <div class="articleTitle">Images</div>
+            <div class="contentLower">
+                <ul>
+                    <li><a href="http://4.bp.blogspot.com/-VORFPEPzcd0/UDvY-s87eUI/AAAAAAAACRk/u--3qY7HFKg/s1600/Loneliness+game+1.jpg">Image Address</a> -- Loneliness image found through Google images</li>
+                    <li>Created the 3 images in the screenshots section of the proposal using adobe illustrator.</li>
+                </ul>
+            </div>
+        <div class="articleTitle">General Process</div>
+            <div class="contentLower">
+                <ul>
+                    <li>Wrote down content for site and submitted for feedback.</li>
+                    <li>Received feedback on first idea which was admittedly quite a bad idea.</li>
+                    <li>Changed idea and came up with a new concept using feedback from last time as a guideline.</li>
+                    <li>Started coding site with a minimalist color style and color scheme in mind to fit style of game.</li>
+                    <li>Hit a snag with the navigation bar in CSS. Went to W3schools to figure out a nice and simple way to create a navigation bar.</li>
+                    <li>Played around with navigation bar settings to get the right feel for my site.</li>
+                    <li>Adjusted size of window for first time and saw that the site did respond very well to smaller screens.</li>
+                    <li>Designed media queries for various size screens.</li>
+                    <li>Got feedback from classmates on the site, the site was too black and they wanted a lighter shade of black.</li>
+                </ul>
+                <br>
+                <h1>Game Update</h1>
+                <h2>Process</h2>
+                <ul>
+                    <li>Took base structure of circle blast to provide frameworks for game.</li>
+                    <li>Removed Circle Blast movement to implement arrow key movement.</li>
+                    <li>Noticed problem with movement due to how Pixi JS events worked. Created jerky movement that did not feel nice and could only move in 4 directions. (Up, down, left, right. No diagonals)</li>
+                    <li>Fixed movement using an array that holds which keys are currently being pressed. (Adds key to the array when key is pressed, removes key when key is released) I did this because Pixi JS's built in event
+                    for a key being held down resulted in the player moving, stopping for a second, then moving again whenever you pressed an arrow key. Did not feel good.</li>
+                    <li>Added classes for NPC's. These NPC's would follow the player and then fade away after a certain point based on distance traveled.</li>
+                    <li>Added NPC's that run away from the user depending on user's position. (Always run away in the most efficient way possible ie. directly away from player) Originally planned to use something like a
+                    Vector for this, but JavaScript has no built in vector class, unless I download something from some library. Ended up creating it on my own. NPC's use fractions to determine how much
+                    they need to travel in the x and y directions to avoid the player</li>
+                    <li>Added music.</li>
+                    <li>Fixed movement (probably). Used a filter array to remove any double elements in array when key is released</li>
+                    <li>Added fade in transitions between scenes.</li>
+                    <li>Added fade out transitions on music</li>
+                    <li>Added loop to make "experience" endless. (Loops after certain distance traveled)</li>
+                    <li>Player fades out if they stop moving. Game ends when player is completely gone</li>
+                    <li>Played around with UI. It's still very basic, but I found putting the button in the top left corner with a lot of empty space created a nice effect
+                    that contributed to the overall feel I was going for.</li>
+                    <li>Shoehorned in some use of local storage. You can rate my "game" at bottom and the value gets saved. I rated it 2 stars</li>
+                </ul>
+                <br>
+                <h2>Controls and goal</h2>
+                <ul>
+                    <li>Arrow keys to move</li>
+                    <li>Just keep moving forward.</li>
+                </ul>
+                <br>
+                <h2>Attribution</h2>
+                <ul>
+                    <li>Long Note Three by Kevin MacLeod is licensed under a Creative Commons Attribution license (https://creativecommons.org/licenses/by/4.0/)
+                            Source: http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100424
+                            Artist: http://incompetech.com/</li>
+                    <li>Ether by Silent Partner. YouTube audio library (Free to use)</li>
+                    <li>Ambient Ambulance by Jingle Punks. YouTube audio library (Free to use)</li>
+                </ul>
+                <br>
+                <h2>Resources</h2>
+                <ul>
+                    <li>Using howler.js for sound effects. (Fade in, fade out, play, pause, etc.)</li>
+                    <li>Using FontAwesome for Stars (That is where all the CSS errors are coming from)</li>
+                </ul>
+                <br>
+                <h2>Above and Beyond</h2>
+                <ul>
+                    <li>I fiddled with alpha values of sprites and containers to create a lot of my effects.</li>
+                    <li>I made transitions between scenes. (Fade in/out)</li>
+                    <li>I messed around with howler and it's fade method to get the right feel for my music transitions.</li>
+                    <li>I used a mathematic equation to calculate the direction the runners should flee in. They always flee directly away from player.</li>
+                    <li>I created a class of NPCs that move in a nice pattern and can make some really neat formations when placed strategically</li>
+                    <li>Created smooth movement for arrow keys using an array that has a keycode pushed to it when a key is pressed. When the user
+                    lets go of the key, I use a filter to get rid of all the instances of a keycode. It is only allowed to push a keycode if the array doesn't already contain 
+                    that keycode, but I filter anyway just in case. This creates smooth, non-jerky movement that isn't possible if Ijust used the built in events.</li>
+                </ul>
+            </div>
+    </div>
+</body>
+</html>

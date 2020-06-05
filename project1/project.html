@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Isolation</title>
+	<link href="style/mainStyle.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+	<link rel="stylesheet" type ="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- External libraries -->
+	<!-- https://github.com/pixijs/pixi.js?utm_source=html5weekly -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.6.0/pixi.min.js"></script>
+
+
+    <!-- Navigation Bar-->
+    <header>
+        <ul id="navlist">
+            <li><a href ="https://people.rit.edu/swa4861/230/project1/">Home</a></li>
+            <li><a href= "https://people.rit.edu/swa4861/230/project1/proposal">Proposal</a></li>
+            <li><a href="https://people.rit.edu/swa4861/230/project1/documentation">Documentation</a></li>
+            <li id="project" class="active"><a href="https://people.rit.edu/swa4861/230/project1/project">Project</a></li>
+        </ul>
+    </header>
+	
+	<!-- Content -->
+	<div class="game">
+		<div class="gameInner"></div>
+		<div class="gameInner">
+			<div class="stars">
+				<form>
+					<input class="star star-5" id="star-5" type="radio" name="star"/>
+					<label class="star star-5" for="star-5"></label>
+					<input class="star star-4" id="star-4" type="radio" name="star"/>
+					<label class="star star-4" for="star-4"></label>
+					<input class="star star-3" id="star-3" type="radio" name="star"/>
+					<label class="star star-3" for="star-3"></label>
+					<input class="star star-2" id="star-2" type="radio" name="star"/>
+					<label class="star star-2" for="star-2"></label>
+					<input class="star star-1" id="star-1" type="radio" name="star"/>
+					<label class="star star-1" for="star-1"></label>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- My JS files -->
+	<script src="js/utilities.js"></script>
+	<script src="js/classes.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/howler.js"></script>
+
+</body>
+</html>
