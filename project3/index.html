@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurant Finder</title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+        <!-- Original Stuff -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- Materialize -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">      <!--Import Google Icon Font-->
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.js"></script>
+
+        <!-- VUE -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    </head>
+    <body>
+        <!-- VUE APP -->
+        <div id="app">
+            <!-- SIDEBAR -->
+            <div id='sidebar'>
+                <div id='paramContainer'>
+                    <!-- Title -->
+                    <maintitle></maintitle>
+
+                    <!-- Search Term -->
+                    <div class="input-field col s1">
+                        <input id="term" type="text" class="validate" v-model="searchTerm">
+                        <label for="term">Search Term</label>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="input-field col s1">
+                        <input placeholder="Address" id="address" type="text" class="validate" v-model="address">
+                        <label for="address">Address/City</label>
+                    </div>
+
+                    <!-- Radius -->
+                    <form action="#">
+                        <p class="range-field">
+                            <label for="radius">Radius ({{radius}} Miles)</label>
+                            <input type="range" id="radius" min="0" max="25" v-model="radius"/>
+                        </p>
+                    </form>
+
+                    <!-- Rating -->
+                    <div class="input-field col s12">
+                        <select v-model="rating">
+                            <option value="" disabled selected>Choose your preferred rating</option>
+                            <option value="1">1 ☆ and Above</option>
+                            <option value="2">2 ☆'s and Above</option>
+                            <option value="3">3 ☆'s and Above</option>
+                            <option value="4">4 ☆'s and Above</option>
+                            <option value="5">5 ☆'s</option>
+                        </select>
+                        <label>Preferred Rating</label>
+                    </div>
+
+                    <!-- Price Range -->
+                    <div class="input-field col s12">
+                        <select v-model="price">
+                            <option value="" disabled selected>Choose your Price Range</option>
+                            <option value="1">$</option>
+                            <option value="1, 2">$$ and Below</option>
+                            <option value="1, 2, 3">$$$ and Below</option>
+                            <option value="1, 2, 3, 4">$$$$ and Below</option>
+                        </select>
+                        <label>Preferred Price</label>
+                    </div>
+
+                    <p class="center-align"><button id="searchButton" class="btn waves-effect waves-light" type="submit" @click="search">Search</button></p>
+                </div>
+
+                <!-- DIRECTIONS -->
+                <div v-show="seen">
+                    <div id="dirContainer">
+                        <!-- Use user location or Choose Manual input -->
+                        
+                        
+                        <!-- Origin -->
+                        <div class="input-field col s1">
+                            <input placeholder="Origin" id="origin" type="text" class="validate" v-model="origin">
+                            <label for="origin">Origin</label>
+                        </div>
+
+                        <!-- Travel Mode -->
+                        <div class="input-field col s12">
+                            <select v-model="travelMode">
+                                <option value="" disabled selected>Travel Mode</option>
+                                <option value="DRIVING">Driving</option>
+                                <option value="BICYCLING">Bicycling</option>
+                                <option value="WALKING">Walking</option>
+                                <option value="TRANSIT">Transit</option>
+                            </select>
+                            <label>Travel Mode</label>
+                        </div>
+
+                        <!-- Get Directions Button -->
+                        <p class="center-align"><button class="btn waves-effect waves-light" type="submit" @click="findPath">Directions</button></p>
+                    </div>
+
+                    <!-- ARROWS -->
+                    <div class="center-align">
+                        <a class="btn-floating btn-large waves-effect waves-light red" id="leftArrow"><i class="material-icons" @click="toLeft">arrow_back</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light red" id="rightArrow"><i class="material-icons" @click="toRight">arrow_forward</i></a>
+                    </div>      
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- MAP -->
+        <div id="map"></div>
+
+        <!-- link to Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+
+        <!-- My Scripts -->
+        <script src="js/vue-components.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google API -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeYBCvkM6DuAMW-ZqGhtnLaWP5g1GNAxQ&callback=initMap"
+                type="text/javascript"></script>
+
+        <!-- Materialize -->
+        <script src="js/materialize.min.js"></script>
+    </body>
+</html>

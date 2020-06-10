@@ -1,0 +1,113 @@
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*** SIDEBAR ***/
+/* (Base rules taken from w3Schools, adjusted slightly to fit my app) */
+#sidebar{
+    height: 100%; 
+    width: 400px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+}
+
+#titleContainer{
+    padding: 15px;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+#title{
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    line-height: 1;
+    text-shadow: #c41200 3px 2px 0;
+    position: relative;
+}
+
+#title:after {
+    padding: 0px;
+    content:"Restaurant Finder";
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-color: #000000;
+    background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, .3) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .3) 75%, transparent 75%, transparent);
+}
+
+#paramContainer{
+    margin: 20px;
+    padding: 20px;
+    background-color: azure;
+}
+
+#dirContainer{
+    margin: 20px;
+    padding: 20px;
+    background-color: azure;
+}
+
+/*** Images ***/
+.imgDisplay{
+    display: block;
+    width:100px;
+    height: 100%;
+}
+
+.imgTitle{
+    font-weight: bold; 
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    width:100px;
+    height: 100%;
+}
+
+.imgText{
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    width:100px;
+    height: 100%;
+}
+
+
+/*** BUTTON ***/
+button{
+    color:red;
+    font-weight: bold;
+    height: 30px;
+    width: 130px;
+    z-index: 100;
+}
+
+#leftArrow{
+    position: absolute;
+    left: 120px
+}
+
+#rightArrow{
+    position: absolute;
+    left: 220px
+}
+
